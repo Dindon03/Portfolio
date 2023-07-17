@@ -2,34 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div id="nav">
-                <ul>
-                    <li><a href="">Compétences</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Formation</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <section>
-        <h1 class="overlap overlap-back">Dondelinger </h1>
-        <h1 class="overlap overlap-front">Jonathan</h1>
-    </section>
+  <section>
+    <div class="buttons">
+      <button onclick="rotateTo('back')">Presentation</button>
+      <button onclick="rotateTo('front')">Projet</button>
+      <button onclick="rotateTo('right')">Compétences</button>
+      <button onclick="rotateTo('left')">Formation</button>
+      <button onclick="rotateTo('bottom')">Contact</button>
+      <button onclick="rotateTo('top')">Voir la supérieure</button>
+    </div>
+  </section>
+  <section class="test">
+    <div class="cube-container">
+      <div class="cube">
+        <div class="face front">
 
-    <script src="add.js"></script>
+          <div class="containerProjet">
+            <div class="Projet">Projet 1</div>
+            <div class="Projet">Projet 2</div>
+            <div class="Projet">Projet 3</div>
+          </div>
+
+        </div>
+        <div class="face back">
+
+          <div class="presentation">
+            <p>Bonjour, je suis un développeur web junior passionné par la création de sites web attrayants et
+              fonctionnels. </p>
+          </div>
+          <div class="photo">
+            <div class="photo1"></div>
+          </div>
+
+        </div>
+        <div class="face left">
+
+        </div>
+        <div class="face right">
+
+        </div>
+        <div class="face top">
+
+          <p>Face supérieure</p>
+
+        </div>
+        <div class="face bottom">
+
+          <p>Face inférieure</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  <script src="add.js"></script>
 </body>
 
 </html>

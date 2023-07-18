@@ -14,27 +14,24 @@
 <body>
   <section>
     <div class="buttons">
-      <button onclick="rotateTo('back')">Presentation</button>
-      <button onclick="rotateTo('front')">Projet</button>
-      <button onclick="rotateTo('right')">Compétences</button>
-      <button onclick="rotateTo('left')">Formation</button>
-      <button onclick="rotateTo('bottom')">Contact</button>
-      <button onclick="rotateTo('top')">Voir la supérieure</button>
+      <button onclick="rotateTo('front')">Presentation</button>
+      <button onclick="rotateTo('back')">A propos</button>
+      <button onclick="rotateTo('right')">Projet</button>
     </div>
   </section>
+
   <section class="test">
-    <div class="cube-container">
+    <div class="outer-cube">
+      <div class="inner-cube">
+        <div class="face innerfront"></div>
+        <div class="face innerback"></div>
+        <div class="face innerleft"></div>
+        <div class="face innerright"></div>
+        <div class="face innertop"></div>
+        <div class="face innerbottom"></div>
+    </div>
       <div class="cube">
         <div class="face front">
-
-          <div class="containerProjet">
-            <div class="Projet">Projet 1</div>
-            <div class="Projet">Projet 2</div>
-            <div class="Projet">Projet 3</div>
-          </div>
-
-        </div>
-        <div class="face back">
 
           <div class="presentation">
             <p>Bonjour, je suis un développeur web junior passionné par la création de sites web attrayants et
@@ -45,23 +42,64 @@
           </div>
 
         </div>
+        <div class="face back">
+
+        </div>
         <div class="face left">
+
+          <div class="containercomp">
+            <h2>Compétences</h2>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
+              height="64px" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
+              height="64px" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              height="64px" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="64px" />
+          </div>
 
         </div>
         <div class="face right">
 
+          <div class="containerProjet">
+            <div class="Projet">Projet 1</div>
+            <div class="Projet">Projet 2</div>
+            <div class="Projet">Projet 3</div>
+          </div>
+
         </div>
         <div class="face top">
 
-          <p>Face supérieure</p>
+          <div class="containercont">
 
+            <h2>Contacts</h2>
+            <div class="lien">
+              <a href="">Dondelinger-jonathan@hotmail.fr</a>
+              <div class="logo">
+                <a href=""><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                    height="64px" />
+                </a>
+                <a href=""><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
+                    height="64px" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="face bottom">
 
           <p>Face inférieure</p>
-          
+
         </div>
       </div>
+    </div>
+  </section>
+  <section>
+    <div class="buttons">
+      <button onclick="rotateTo('left')">Compétences</button>
+      <button onclick="rotateTo('bottom')">Formation</button>
+      <button onclick="rotateTo('top')">Contacts</button>
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>

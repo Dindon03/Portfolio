@@ -86,13 +86,14 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 
 .outer-cube{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   position: relative;
     transform-style: preserve-3d;
   perspective: 2000px;
@@ -101,8 +102,8 @@ a{
 }
 
 .cube {
-  width: 900px;
-  height: 900px;
+  width: 800px;
+  height: 800px;
   position: relative;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
@@ -121,58 +122,59 @@ a{
 }
 
 .front {
-  transform: translateZ(450px);
+  transform: translateZ(400px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
-  background-color: rgba(0, 0, 0, 50%) ;
+  background-color: rgba(0, 0, 0, 25%) ;
 }
 
 .back {
-  transform: translateZ(-450px) rotateX(-180deg);
+  transform: translateZ(-400px) rotateX(-180deg);
 
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
-  background-color: rgba(0, 0, 0, 50%) ;
+  background-color: rgba(0, 0, 0, 25%) ;
 }
 
 .left {
-  transform: translateX(450px) rotateY(90deg);
+  transform: translateX(400px) rotateY(90deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 50%) ;
+  background-color: rgba(0, 0, 0, 25%) ;
 }
 
 .right {
-  transform: translateX(-450px) rotateY(-90deg);
+  transform: translateX(-400px) rotateY(-90deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
-  background-color: rgba(0, 0, 0, 50%) ;
+  background-color: rgba(0, 0, 0, 25%) ;
 }
 
 .top {
-  transform: translateY(-450px) rotateX(90deg);
+  transform: translateY(-400px) rotateX(90deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
-  background-color: rgba(0, 0, 0, 50%) ;
+  background-color: rgba(0, 0, 0, 25%) ;
 }
 
 .bottom {
-  transform: translateY(450px) rotateX(-90deg);
+  transform: translateY(400px) rotateX(-90deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
-  background-color: rgba(0, 0, 0, 50%) ;
+  background-color: rgba(0, 0, 0, 25%) ;
 }
 
+/* Cube inner */
 
 .inner-cube {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   position: absolute;
   transform-style: preserve-3d;
   animation: rotation 10s linear infinite;
@@ -182,7 +184,7 @@ a{
 
 
 .innerfront {
-  transform: translateZ(150px);
+  transform: translateZ(75px);
   background-image: url(pngwing.com.png);
   background-position: center;
   background-size: cover;
@@ -190,7 +192,7 @@ a{
 }
 
 .innerback {
-  transform: rotateY(180deg) translateZ(150px) ;
+  transform: rotateY(180deg) translateZ(75px) ;
   background-image: url(pngwing.com.png);
   background-position: center;
   background-size: cover;
@@ -198,7 +200,7 @@ a{
 }
 
 .innerleft {
-  transform: translateX(-150px) rotateY(-90deg) ;
+  transform: translateX(-75px) rotateY(-90deg) ;
   background-image: url(pngwing.com.png);
   background-position: center;
   background-size: cover;
@@ -206,7 +208,7 @@ a{
 }
 
 .innerright {
-  transform: translateX(150px) rotateY(90deg);
+  transform: translateX(75px) rotateY(90deg);
   background-image: url(pngwing.com.png);
   background-position: center;
   background-size: cover;
@@ -214,7 +216,7 @@ a{
 }
 
 .innertop {
-  transform: translateY(-150px) rotateX(90deg) ;
+  transform: translateY(-75px) rotateX(90deg) ;
   background-image: url(pngwing.com.png);
   background-position: center;
   background-size: cover;
@@ -222,7 +224,7 @@ a{
 }
 
 .innerbottom {
-  transform: translateY(150px) rotateX(-90deg) ;
+  transform: translateY(75px) rotateX(-90deg) ;
   background-image: url(pngwing.com.png);
   background-position: center;
   background-size: cover;
@@ -242,34 +244,10 @@ a{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.buttons {
+ .buttons {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
   margin-top: 20px;
 }
 
@@ -277,9 +255,102 @@ a{
   margin: 20px 5px;
   background-color: #17D4EF;
   border: none;
-  width: 100px;
-  height: 25px;
   cursor: pointer;
+}
+
+button {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+button:hover {
+  
+  background: #0FF0FC;
+  color: #0FF0FC;
+  animation: box 3s infinite;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}
+button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 100%;
+  top: -18px;
+  border: 2px solid #0FF0FC;
+  background: #272822;
+  transition: 0.2s;
+}
+
+button:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+button i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 0%;
+  bottom: -18px;
+  border: 2px solid #0FF0FC;
+  background: #272822;
+  transition: 0.2s;
+}
+
+button:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px #0FF0FC;
+  }
+  100% {
+    box-shadow: #27272c;
+  }
 }
 
 .containercomp{
@@ -297,10 +368,19 @@ a{
   padding-top: 320px;
   padding-left: 150px;
   color: white;
-  font-size: 30px;
+  font-size: 26px;
   gap: 20px;
 }
 .lien{
   margin-left: 200px;
   
+}
+
+
+
+
+@media (max-width: 650px)  {
+  body{
+    flex-direction: column;
+  }
 }

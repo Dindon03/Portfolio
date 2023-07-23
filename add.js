@@ -1,3 +1,4 @@
+/* CUBE */
 const cube = document.querySelector('.cube');
 
 function rotateTo(face) {
@@ -34,3 +35,18 @@ function getRotationY(face) {
       return '0deg';
   }
 }
+
+/* Carousel */
+const carousel = document.querySelector(".carousel");
+const arrowBtn = document.querySelectorAll(".containerProjet i");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+
+arrowBtn.forEach(btn => {
+  btn.addEventListener("click", () => {
+    carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+  })
+})
+
+
+
+

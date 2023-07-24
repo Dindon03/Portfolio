@@ -17,7 +17,6 @@ body {
 
 section {
   display: flex;
-  margin-left: 100px;
 }
 
 .presentation {
@@ -72,14 +71,14 @@ a{
 }
 
 .containerProjet {
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
   position: relative;
 }
 .containerProjet i{
   height: 50px;
   width: 50px;
-  background: #17D4EF;
+  background: linear-gradient(to right , #17DAF3, #1A439A);
   text-align: center;
   line-height: 50px;
   border-radius: 10%;
@@ -93,16 +92,16 @@ a{
 
 }
 .containerProjet i:first-child {
-  display: none;
+  left: -32px;
 }
 .containerProjet i:last-child{
-  display: none;
+  right: -32px;
 }
 
 .containerProjet .carousel{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
+  grid-auto-columns: 100%;
   gap: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -115,9 +114,9 @@ a{
 
 .carousel .card {
   scroll-snap-align: start;
-  height: 200px;
+  height: 300px;
   list-style: none;
-  background: #fff;
+  background: linear-gradient(to right , #17DAF3, #1A439A);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -128,8 +127,35 @@ a{
     height: 400px;
   }
 }
-
-
+.projet1{
+  width: 100%;
+  height: 100%;
+  
+  background-image: url(catalogue.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.projet2{
+  width: 100%;
+  height: 100%;
+  background-image: url(agence.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.containerprop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px; 
+  color: white;
+  font-size: 1.5em;
+  text-align: justify;
+  font-family: 'VT323', monospace;
+  width: 100%;
+  height: 100%;
+}
 
 
 
@@ -142,7 +168,7 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin: 100px 100px 0 100px;
 }
 
 .outer-cube{
@@ -158,27 +184,23 @@ a{
 }
 
 .cube {
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   position: relative;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
   transition: transform 1s;
-  
-  
+
 }
 
 .face {
   position: absolute;
   width: 100%;
   height: 100%;
-  
-
-
 }
 
 .front {
-  transform: translateZ(400px);
+  transform: translateZ(350px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -189,15 +211,15 @@ a{
 }
 
 .back {
-  transform: translateZ(-400px) rotateX(-180deg);
-
+  transform: translateZ(-350px) rotateX(-180deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
-  background-color: rgba(0, 0, 0, 25%) ;
+  background-color: rgba(0, 0, 0, 25%) ;  
+  
 }
 
 .left {
-  transform: translateX(400px) rotateY(90deg);
+  transform: translateX(350px) rotateY(90deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
   justify-content: center;
@@ -206,7 +228,7 @@ a{
 }
 
 .right {
-  transform: translateX(-400px) rotateY(-90deg);
+  transform: translateX(-350px) rotateY(-90deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
   background-color: rgba(0, 0, 0, 25%) ;
@@ -217,14 +239,14 @@ a{
 }
 
 .top {
-  transform: translateY(-400px) rotateX(90deg);
+  transform: translateY(-350px) rotateX(90deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
   background-color: rgba(0, 0, 0, 25%) ;
 }
 
 .bottom {
-  transform: translateY(400px) rotateX(-90deg);
+  transform: translateY(350px) rotateX(-90deg);
   background-image: url(vecteezy_modern-trendy-abstract-geometric-social-media-frame-border_15314469_230.png);
   background-size: cover;
   background-color: rgba(0, 0, 0, 25%) ;
@@ -377,7 +399,7 @@ img{
   }
   .containerProjet .carousel{
     width: 400px;
-    grid-auto-columns: calc((100% / 2) - 9px);
+    grid-auto-columns: 100%;
     
   }
   .containerProjet i:first-child {
@@ -678,7 +700,6 @@ img{
   width: 200px;
   height: 200px;
   list-style: none;
-  background: #fff;
   border-radius: 8px;
   transition: height 1s ease;
   

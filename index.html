@@ -18,9 +18,23 @@
   <script src="add.js" defer></script>
   <title>Document</title>
 </head>
+<header>
+
+  <nav>
+    <a id="link" href="#"><span id="burger"></span></a>
+    <ul class="list-unstyled">
+      <li><button onclick="rotateTo('front')"><span>Presentation<i></i></span></button></li>
+      <li><button onclick="rotateTo('back')"><span>A propos<i></i></span></button></li>
+      <li><button onclick="rotateTo('right')"><span>Projet<i></i></span></button></li>
+      <li><button onclick="rotateTo('left')"><span>Compétences<i></i></span></button></li>
+      <li><button onclick="rotateTo('bottom')"><span>Formation<i></i></span></button></li>
+      <li><button onclick="rotateTo('top')"><span>Contacts<i></i></span></button></li>
+    </ul>
+  </nav>
+</header>
 
 <body>
-  <section>
+  <section class="select">
     <div class="buttons">
       <button onclick="rotateTo('front')"><span>Presentation<i></i></span></button>
       <button onclick="rotateTo('back')"><span>A propos<i></i></span></button>
@@ -39,8 +53,10 @@
         <div class="face innerbottom"></div>
       </div>
       <div class="cube">
+
         <div class="face front">
-          <div class="containerPre">
+
+          <div id="containerPre" class="active">
             <div class="presentation">
               <p>Bonjour, je suis un développeur web junior passionné par la création de sites web attrayants et
                 fonctionnels. </p>
@@ -50,15 +66,17 @@
             </div>
           </div>
         </div>
+
         <div class="face back">
-          <div class="containerprop">
-            <div id="Apropos"></div>
+
+          <div id="containerprop" class="active">
+            <div class="Apropos"></div>
           </div>
         </div>
 
         <div class="face left">
 
-          <div class="containercomp">
+          <div id="containercomp" class="active">
             <h2>Compétences</h2>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
@@ -69,8 +87,9 @@
         </div>
         <div class="face right">
 
-          <div class="containerProjet">
-            <i id="top" class="fa-solid fa-caret-left"></i>
+          <div id="containerProjet" class="active">
+
+            <i id="left" class="fa-solid fa-caret-left"></i>
             <div class="carousel">
               <div class="card">
                 <div class="projet1"></div>
@@ -82,7 +101,7 @@
                 <div class="rojet3">Projet 3</div>
               </div>
             </div>
-            <i id="bottom" class="fa-solid fa-caret-right"></i>
+            <i id="right" class="fa-solid fa-caret-right"></i>
           </div>
 
         </div>
@@ -90,7 +109,7 @@
 
         <div class="face top">
 
-          <div class="containercont">
+          <div id="containercont" class="active">
 
             <h2>Contacts</h2>
             <div class="lien">
@@ -110,13 +129,22 @@
         </div>
         <div class="face bottom">
 
-          <p>Face inférieure</p>
+          <div id="containerFor" class="active">
+            <ul>
+              <h2>Formation</h2>
+            </ul>
+            <li>Developpeur Web et Web mobile <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Online formapro - 2023</li>
+            <li></li>
+            <li></li>
+
+          </div>
 
         </div>
       </div>
     </div>
   </section>
-  <section>
+  <section class="select">
     <div class="buttons">
       <button onclick="rotateTo('left')"><span>Compétences<i></i></span></button>
       <button onclick="rotateTo('bottom')"><span>Formation<i></i></span></button>

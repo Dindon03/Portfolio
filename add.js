@@ -8,15 +8,46 @@ function rotateTo(face) {
 function getRotationX(face) {
   switch (face) {
     case 'front':
+      containerPre.classList.remove("inactive");
+      containerprop.classList.remove("inactive");
+      containercomp.classList.remove("inactive");
+      containerProjet.classList.remove("inactive");
+      containercont.classList.remove("inactive");
+      containerFor.classList.remove("inactive");
       return '0deg';
     case 'back':
+      containerPre.classList.add("inactive");
+      containerprop.classList.remove("inactive");
+      containercomp.classList.remove("inactive");
+      containerProjet.classList.remove("inactive");
+      containercont.classList.remove("inactive");
+      containerFor.classList.remove("inactive");
       return '180deg';
     case 'left':
+      
     case 'right':
+      containerPre.classList.remove("inactive");
+      containerprop.classList.remove("inactive");
+      containercomp.classList.add("inactive");
+      containerProjet.classList.remove("inactive");
+      containercont.classList.remove("inactive");
+      containerFor.classList.remove("inactive");
       return '0deg';
     case 'top':
+      containerPre.classList.remove("inactive");
+      containerprop.classList.remove("inactive");
+      containercomp.classList.remove("inactive");
+      containerProjet.classList.remove("inactive");
+      containercont.classList.remove("inactive");
+      containerFor.classList.add("inactive");
       return '-90deg';
     case 'bottom':
+      containerPre.classList.remove("inactive");
+      containerprop.classList.remove("inactive");
+      containercomp.classList.remove("inactive");
+      containerProjet.classList.remove("inactive");
+      containercont.classList.add("inactive");
+      containerFor.classList.remove("inactive");
       return '90deg';
   }
 }
@@ -27,6 +58,12 @@ function getRotationY(face) {
     case 'back':
       return '0deg';
     case 'left':
+      containerPre.classList.remove("inactive");
+      containerprop.classList.remove("inactive");
+      containercomp.classList.remove("inactive");
+      containerProjet.classList.add("inactive");
+      containercont.classList.remove("inactive");
+      containerFor.classList.remove("inactive");
       return '-90deg';
     case 'right':
       return '90deg';
@@ -38,8 +75,10 @@ function getRotationY(face) {
 
 /* Carousel */
 const carousel = document.querySelector(".carousel");
-const arrowBtn = document.querySelectorAll(".containerProjet i");
+const arrowBtn = document.querySelectorAll("#containerProjet i");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+
+
 
 arrowBtn.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -48,9 +87,28 @@ arrowBtn.forEach(btn => {
 })
 
 
+/* Menu burger */
+
+/* Sélection des éléments HTML */
+let link = document.getElementById('link')
+let burger = document.getElementById('burger')
+let ul = document.querySelector('ul')
+
+/* gestionnaire d'événement sur le a#link pour venir changer l'attribution de la classe .open à la ul et au span#burger */
+link.addEventListener('click', function(e) {
+  e.preventDefault()
+  burger.classList.toggle('open')
+  ul.classList.toggle('open')
+})
 
 
-var aText = new Array(
+
+
+
+
+
+
+let aText = new Array(
   "There are only 10 types of people in the world:", 
   "Those who understand binary, and those who don't"
   );

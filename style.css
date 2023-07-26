@@ -92,7 +92,7 @@ body {
   background-color: black;
   background-attachment: fixed;
   background-size: cover;
-  justify-content: space-around;
+  justify-content: center;
   display: flex;
   
 }
@@ -129,17 +129,21 @@ a{
   color: white;
 }
 
+.card-photo{
+  perspective: 1000px;
+  width: 12.5em;
+  height: 12.5em;
+  margin-left: 300px;
+}
 .containerPhoto {
 
   background-image: url(PhotoCyberpunk-2077.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   border-radius: 50%;
+  transition: all 0.15s ease-out;
   width: 12.5em;
   height: 12.5em;
-  margin-left: 300px;
-  
 }
 .photo{
   background-image: url(Lovepik_com-610723777-Blue\ technology\ digital\ effect\ decoration.png);

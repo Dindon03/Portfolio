@@ -1,5 +1,5 @@
-/* CUBE */
-const cube = document.querySelector('.cube');
+/*  /* CUBE */
+ const cube = document.querySelector('.cube');
 
 function rotateTo(face) {
   cube.style.transform = `rotateX(${getRotationX(face)}) rotateY(${getRotationY(face)})`;
@@ -71,7 +71,7 @@ function getRotationY(face) {
     case 'bottom':
       return '0deg';
   }
-}
+} 
 
 /* Carousel */
 const carousel = document.querySelector(".carousel");
@@ -89,12 +89,10 @@ arrowBtn.forEach(btn => {
 
 /* Menu burger */
 
-/* Sélection des éléments HTML */
 let link = document.getElementById('link')
 let burger = document.getElementById('burger')
 let ul = document.querySelector('ul')
 
-/* gestionnaire d'événement sur le a#link pour venir changer l'attribution de la classe .open à la ul et au span#burger */
 link.addEventListener('click', function(e) {
   e.preventDefault()
   burger.classList.toggle('open')
@@ -103,12 +101,66 @@ link.addEventListener('click', function(e) {
 
 
 
+ const photo = document.querySelectorAll(".card-photo") 
+
+ photo.forEach( el => {
+  el.addEventListener("mousemove", e => {
+
+  let elRect = el.getBoundingClientRect()
+
+  let x = e.clientX - elRect.x 
+  let y = e.clientY - elRect.y 
+
+  let midCardWidth = elRect.width / 2
+  let midCardHeight = elRect.height /2
+
+  let angleY = -(x - midCardWidth) / 4
+  let angleX = (y - midCardHeight) / 4
+
+  el.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`; 
+})
+ 
+el.addEventListener("mouseleave", () => {
+  el.children[0].style.transform = "rotateX(0) rotateY(0)"
+})
+
+})
+
+function rotateCube(e) {
+
+  let cube = document.getElementsByClassName("cube");
+  let x = e.clientX - window.innerWidth / 2;
+  let y = e.clientY - window.innerHeight / 2;
+  let q = 0.15;
+  let i;
+
+  x = x * q * 1.35;
+  y = y * q * 1.35;
+
+  for(i = 0; i < cube.length; i++) {
+    cube[i].style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";  
+  }
+
+}
+
+document.addEventListener("mouseup", rotateCube);
 
 
 
 
 
-let aText = new Array(
+
+
+
+
+
+
+
+
+
+
+
+/* let aText = new Array(
   "There are only 10 types of people in the world:", 
   "Those who understand binary, and those who don't"
   );
@@ -144,4 +196,4 @@ let aText = new Array(
   }
   
   
-  typewriter();
+  typewriter(); */ 

@@ -308,6 +308,8 @@ img{
   justify-content: center;
   align-items: center;
   margin: 100px 100px 0 100px;
+  user-select: none;
+  cursor: grab;
 }
 
 .outer-cube{

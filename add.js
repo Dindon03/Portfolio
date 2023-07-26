@@ -1,4 +1,4 @@
-/*  /* CUBE */
+          /* CUBE */
  const cube = document.querySelector('.cube');
 
 function rotateTo(face) {
@@ -99,7 +99,7 @@ link.addEventListener('click', function(e) {
   ul.classList.toggle('open')
 })
 
-
+       /* Photo 3D */
 
  const photo = document.querySelectorAll(".card-photo") 
 
@@ -126,24 +126,39 @@ el.addEventListener("mouseleave", () => {
 
 })
 
+
+
+// Variables pour stocker les angles de rotation du cube
+let cubeRotationX = 0;
+let cubeRotationY = 0;
+
+// Sensibilité de rotation
+const sensitivity = 0.5;
+
 function rotateCube(e) {
+  // Calculer le changement de position de la souris par rapport à la position précédente
+  const deltaX = e.movementX * sensitivity;
+  const deltaY = e.movementY * sensitivity;
 
+  // Mettre à jour les angles de rotation en fonction du mouvement de la souris
+  cubeRotationY += deltaX;
+  cubeRotationX -= deltaY;
+
+  // Appliquer les rotations au cube en utilisant les angles de rotation
   let cube = document.getElementsByClassName("cube");
-  let x = e.clientX - window.innerWidth / 2;
-  let y = e.clientY - window.innerHeight / 2;
-  let q = 0.15;
-  let i;
-
-  x = x * q * 1.35;
-  y = y * q * 1.35;
-
-  for(i = 0; i < cube.length; i++) {
-    cube[i].style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";  
+  for (let i = 0; i < cube.length; i++) {
+    cube[i].style.transform = `rotateX(${cubeRotationX}deg) rotateY(${cubeRotationY}deg)`;
   }
-
 }
 
-document.addEventListener("mouseup", rotateCube);
+document.addEventListener("mousedown", () => {
+  document.addEventListener("mousemove", rotateCube);
+  document.body.style.cursor = "grabbing";
+});
+
+document.addEventListener("mouseup", () => {
+  document.removeEventListener("mousemove", rotateCube);
+});
 
 
 

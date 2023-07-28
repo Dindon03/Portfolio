@@ -137,7 +137,7 @@ p {
   color: white;
   font-size: 1.5em;
   font-family: 'VT323', monospace;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.50);
 }
 
 a {
@@ -244,7 +244,6 @@ a {
 }
 
 .card:hover {
-  height: 400px;
   opacity: 1;
 }
 
@@ -370,7 +369,7 @@ img {
   height: 700px;
   position: relative;
   transform-style: preserve-3d;
-  transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(-10deg) rotateY(15deg);
   transition: transform 1s;
 
 }
@@ -434,6 +433,7 @@ img {
   height: 150px;
   position: absolute;
   transform-style: preserve-3d;
+  transform: translateX(0px) translateY(0px) translateZ(0px);
   animation: rotation 10s linear infinite;
 }
 
@@ -487,7 +487,7 @@ img {
   }
 
   to {
-    transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(720deg) rotateY(360deg);
   }
 }
 
@@ -736,5 +736,9 @@ nav{
 
 
 }
+
+
+
+
 
 

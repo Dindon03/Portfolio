@@ -89,15 +89,14 @@ arrowBtn.forEach(btn => {
 
 /* Menu burger */
 
-let link = document.getElementById('link')
-let burger = document.getElementById('burger')
-let ul = document.querySelector('ul')
+let burgerMenu = document.getElementById('burger-menu');
+let overlay = document.getElementById('menu');
+burgerMenu.addEventListener('click',function(){
+  this.classList.toggle("close");
+  overlay.classList.toggle("overlay");
+});
 
-link.addEventListener('click', function(e) {
-  e.preventDefault()
-  burger.classList.toggle('open')
-  ul.classList.toggle('open')
-})
+
 
        /* Photo 3D */
 

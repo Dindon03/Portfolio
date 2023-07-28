@@ -16,24 +16,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="add.js" defer></script>
-  <title>Document</title>
+  <title>J.Dondelinger</title>
 </head>
-<header>
-
-  <nav>
-    <a id="link" href="#"><span id="burger"></span></a>
-    <ul class="list-unstyled">
-      <li><button onclick="rotateTo('front')"><span>Presentation<i></i></span></button></li>
-      <li><button onclick="rotateTo('back')"><span>A propos<i></i></span></button></li>
-      <li><button onclick="rotateTo('right')"><span>Projet<i></i></span></button></li>
-      <li><button onclick="rotateTo('left')"><span>Compétences<i></i></span></button></li>
-      <li><button onclick="rotateTo('bottom')"><span>Formation<i></i></span></button></li>
-      <li><button onclick="rotateTo('top')"><span>Contacts<i></i></span></button></li>
-    </ul>
-  </nav>
-</header>
 
 <body>
+  <header>
+    <nav>
+      <div id="burger-menu">
+        <span></span>
+      </div>
+      <div id="menu">
+        <ul>
+          <li><button onclick="rotateTo('front')"><span>Presentation<i></i></span></button></li>
+          <li><button onclick="rotateTo('back')"><span>A propos<i></i></span></button></li>
+          <li><button onclick="rotateTo('right')"><span>Projet<i></i></span></button></li>
+          <li><button onclick="rotateTo('left')"><span>Compétences<i></i></span></button></li>
+          <li><button onclick="rotateTo('bottom')"><span>Formation<i></i></span></button></li>
+          <li><button onclick="rotateTo('top')"><span>Contacts<i></i></span></button></li>
+        </ul>
+    </nav>
+  </header>
+
+
   <section class="select">
     <div class="buttons">
       <button onclick="rotateTo('front')"><span>Presentation<i></i></span></button>
@@ -59,7 +63,7 @@
           <div id="containerPre" class="active">
             <div class="presentation">
               <h1> Jonathan Dondelinger</h1>
-              <p> Développeur web  </p>
+              <p> Développeur web </p>
             </div>
             <div class="card-photo">
               <div class="containerPhoto">
@@ -72,7 +76,12 @@
         <div class="face back">
 
           <div id="containerprop" class="active">
-            <div class="Apropos"></div>
+            <div class="Apropos">
+
+
+
+
+            </div>
           </div>
         </div>
 
@@ -94,12 +103,19 @@
             <i id="left" class="fa-solid fa-caret-left"></i>
             <div class="carousel">
               <div class="card">
-                <div class="projet1"><div class="projet-hover"><p>Test</p></div></div>
-                
+                <div class="projet1">
+                  <div class="projet-hover">
+                    <p>Html / CSS / Javascript</p>
+                  </div>
+                </div>
+
               </div>
               <div class="card">
-                <div class="projet2"></div>
-                <div class="projet-hover"></div>
+                <div class="projet2">
+                  <div class="projet-hover">
+                    <p>Html / CSS / Javascript / PHP</p>
+                  </div>
+                </div>
               </div>
               <div class="card">
                 <div class="rojet3">Projet 3</div>

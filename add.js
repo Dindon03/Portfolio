@@ -162,7 +162,7 @@ document.addEventListener("mouseup", () => {
 
 /* EXPLOSE CUBE */
 
-const boom = document.querySelector(".inner-cube")
+/* const boom = document.querySelector(".inner-cube")
 
 function exploseTo() {
   boom.style.transform = `translateX(${getTranslateX(face)}) translateY(${getTranslateY(face)}) translateZ(${getTranslateZ(face)})`;
@@ -217,4 +217,4 @@ function getTranslateZ(face) {
       return '0px';
   }
 }
-
+ */

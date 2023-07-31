@@ -154,9 +154,10 @@ a {
 
 .containerPhoto {
 
-  background-image: url(PhotoCyberpunk-2077.jpg);
+  background-image: url(photo2.jpg);
   background-size: cover;
-  background-position: center;
+  background-position-x: -2vh;
+  background-position-y: -2vh;
   border-radius: 50%;
   transition: all 0.15s ease-out;
   width: 12.5em;
@@ -187,7 +188,7 @@ a {
 }
 
 #containerProjet {
-  max-width: 600px;
+  max-width: 530px;
   width: 100%;
   position: relative;
 }
@@ -241,6 +242,7 @@ a {
   justify-content: center;
   cursor: pointer;
   transition: height 1s ease;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -369,7 +371,7 @@ img {
   height: 700px;
   position: relative;
   transform-style: preserve-3d;
-  transform: rotateX(-10deg) rotateY(15deg);
+  transform: rotateX() rotateY();
   transition: transform 1s;
 
 }
@@ -437,8 +439,6 @@ img {
   animation: rotation 10s linear infinite;
 }
 
-
-
 .innerfront {
   transform: translateZ(75px);
   background-image: url(Abstract_digital_background_with_technology_circuit_generated.jpg);
@@ -495,6 +495,7 @@ img {
 
 /* Buttons */
 
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -527,6 +528,7 @@ button:hover {
 
 
 /* RESPONSIVE */
+
 @media screen and (max-width: 720px) {
 
   body {
@@ -551,7 +553,6 @@ button:hover {
     margin-bottom: 100px;
   }
 
-
 }
 
 
@@ -562,7 +563,7 @@ button:hover {
 
 nav{
   display: block;
-  margin: 1% 10% 0% 0%;
+  
 }
   .buttons {
     margin-top: 20px;
@@ -580,6 +581,7 @@ nav{
 
   .test{
     margin: 0;
+    padding: 0;
   }
 
   .outer-cube {
@@ -594,8 +596,8 @@ nav{
   }
   
   .cube {
-    width: 380px;
-    height: 380px;
+    width: 360px;
+    height: 360px;
     position: relative;
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(0deg);
@@ -609,27 +611,27 @@ nav{
   }
 
   .front {
-    transform: translateZ(200px);
+    transform: translateZ(180px);
   }
 
   .back {
-    transform: translateZ(-190px) rotateX(-180deg);
+    transform: translateZ(-180px) rotateX(-180deg);
   }
 
   .left {
-    transform: translateX(190px) rotateY(90deg);
+    transform: translateX(180px) rotateY(90deg);
   }
 
   .right {
-    transform: translateX(-190px) rotateY(-90deg);
+    transform: translateX(-180px) rotateY(-90deg);
   }
 
   .top {
-    transform: translateY(-190px) rotateX(90deg);
+    transform: translateY(-180px) rotateX(90deg);
   }
 
   .bottom {
-    transform: translateY(190px) rotateX(-90deg);
+    transform: translateY(180px) rotateX(-90deg);
   }
 
   /* Cube inner */
@@ -677,8 +679,8 @@ nav{
   }
 
   .containerPhoto {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: 0;
   }
 
@@ -687,9 +689,10 @@ nav{
     margin: 0;
     translate: 60px 60px;
   }
+
   .photo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 
   #containercont {

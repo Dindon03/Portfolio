@@ -14,7 +14,7 @@ function getRotationX(face) {
       containerProjet.classList.remove("inactive");
       containercont.classList.remove("inactive");
       containerFor.classList.remove("inactive");
-      return '-10deg';
+      return '-0deg';
     case 'back':
       containerPre.classList.add("inactive");
       containerprop.classList.remove("inactive");
@@ -22,7 +22,7 @@ function getRotationX(face) {
       containerProjet.classList.remove("inactive");
       containercont.classList.remove("inactive");
       containerFor.classList.remove("inactive");
-      return '170deg';
+      return '180deg';
     case 'left':
 
     case 'right':
@@ -55,9 +55,9 @@ function getRotationX(face) {
 function getRotationY(face) {
   switch (face) {
     case 'front':
-      return '15deg'
+      return '0deg'
     case 'back':
-      return '15deg';
+      return '0deg';
     case 'left':
       containerPre.classList.remove("inactive");
       containerprop.classList.remove("inactive");
@@ -164,13 +164,13 @@ document.addEventListener("mouseup", () => {
 
 const boom = document.querySelector(".inner-cube")
 
-function exploseTo(face) {
+function exploseTo() {
   boom.style.transform = `translateX(${getTranslateX(face)}) translateY(${getTranslateY(face)}) translateZ(${getTranslateZ(face)})`;
 }
 function getTranslateX(face) {
   switch (face) {
     case 'innerfront':
-      return '0px'
+      return '0px';
     case 'innerback':
       return '0px';
     case 'innerleft':
@@ -178,7 +178,7 @@ function getTranslateX(face) {
     case 'innerright':
       return '100px';
     case 'innertop':
-      return '0px'
+      return '0px';
     case 'innerbottom':
       return '0px';
   }
@@ -187,7 +187,7 @@ function getTranslateX(face) {
 function getTranslateY(face) {
   switch (face) {
     case 'innerfront':
-      return '0px'
+      return '0px';
     case 'innerback':
       return '0px';
     case 'innerleft':
@@ -195,7 +195,7 @@ function getTranslateY(face) {
     case 'innerright':
       return '0px';
     case 'innertop':
-      return '100px'
+      return '100px';
     case 'innerbottom':
       return '100px';
   }
@@ -204,7 +204,7 @@ function getTranslateY(face) {
 function getTranslateZ(face) {
   switch (face) {
     case 'innerfront':
-      return '100px'
+      return '100px';
     case 'innerback':
       return '100px';
     case 'innerleft':
@@ -212,7 +212,7 @@ function getTranslateZ(face) {
     case 'innerright':
       return '0px';
     case 'innertop':
-      return '0px'
+      return '0px';
     case 'innerbottom':
       return '0px';
   }

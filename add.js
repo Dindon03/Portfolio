@@ -117,7 +117,7 @@ photo.forEach(el => {
     let angleY = -(x - midCardWidth) / 4
     let angleX = (y - midCardHeight) / 4
 
-    el.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
+    el.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.2)`;
   })
 
   el.addEventListener("mouseleave", () => {
